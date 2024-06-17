@@ -10,8 +10,9 @@
 
 int main(void)
 {
+	char c;
 	/* Iteramos sobre todos los caracteres desde 'a' hasta 'z' */
-	for (char c = 'a'; c <= 'z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 {
 		/* Saltamos los caracteres 'q' y 'e' */
 		if (c == 'q' && c == 'e')
