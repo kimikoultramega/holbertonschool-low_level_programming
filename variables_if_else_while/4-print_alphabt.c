@@ -1,28 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main - Entry point
+ * main - Prints the alphabet in lowercase, except for q and e.
  *
- * Description: This program assigns a random number to the variable n
- * and prints the last digit of n with a description.
- *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 
 int main(void)
 {
-	char c;
-	/* Iteramos sobre todos los caracteres desde 'a' hasta 'z' */
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		/* Saltamos los caracteres 'q' y 'e' */
-		if (c == 'q' && c == 'e')
+	char letter;
 
-			continue;
-
-		/* Imprimimos el carácter actual */
-		putchar(c);
-	}
-	/* Imprimimos un salto de línea */
+	for (letter = 'a'; letter <= 'z'; letter++)
+{
+	if (letter != 'e' && letter != 'q')
+	putchar(letter);
+}
 	putchar('\n');
 	return (0);
 }
