@@ -14,7 +14,7 @@ int main(void)
 	for (char c = 'a'; c <= 'z'; c++)
 {
 		/* Saltamos los caracteres 'q' y 'e' */
-		if (c == 'q' || c == 'e')
+		if (c == 'q' && c == 'e')
 {
 			continue;
 }
