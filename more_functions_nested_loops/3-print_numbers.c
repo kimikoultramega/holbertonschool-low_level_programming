@@ -1,8 +1,10 @@
 #include "main.h"
+
 /**
  * print_numbers - imprime numeros del 0 al 9
  * Return: nada
  */
+
 void print_numbers(void)
 {
 	int counter = 0;
