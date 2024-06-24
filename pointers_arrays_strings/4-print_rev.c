@@ -1,6 +1,4 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
 
 /**
  * print_rev - check the code
@@ -10,12 +8,16 @@
 
 void print_rev(char *s)
 {
-	int larstring = strlen(s);/* Obtengo el largo de la cadena */
-	int i;/* Declaro una variable del tipo int para i */
+	int inicio;
 
-	for (i = larstring - 1; i >= 0; i--)
+	int b;
+
+	for (inicio = 0; s[inicio] != '\0'; inicio++)
 	{
-		putchar(s[i]);
 	}
-	putchar('\n');
+	for (b = inicio - 1; b >= 0; b--)
+	{
+		_putchar(s[b]);
+	}
+	_putchar('\n');
 }
