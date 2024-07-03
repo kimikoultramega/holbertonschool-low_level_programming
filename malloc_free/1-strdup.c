@@ -27,8 +27,8 @@ char *_strdup(char *str)
 	{
 		longitud++;
 	}
-
-	new_string = (char *)malloc((longitud + 1) + sizeof(char));
+	longitud++;
+	new_string = malloc((longitud + 1) + sizeof(char));
 
 	if (new_string == NULL)
 	{
