@@ -1,50 +1,44 @@
-#include <stdarg.h>
 #include <stdio.h>
-
+#include <stdarg.h>
+/**
+ * print_all - un dolor de cabeza compa.
+ * @format: format
+ *
+ */
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i = 0;
-	char c;
+	unsigned int i = 0;
+	char *str;
+	char *separator = "";
 
 	va_start(args, format);
-
-	while (format[i] != '\0')
+	while (format && format[i])
 	{
-		c = format[i];
-		if (c == 'c')
+		switch (format[i])
 		{
-			char char_arg = va_arg(args, int);
-
-			printf("%c", char_arg);
+			case 'c':
+				printf("%s%c", separator, va_arg(args, int));
+				break;
+			case 'i':
+				printf("%s%d", separator, va_arg(args, int));
+				break;
+			case 'f':
+				printf("%s%f", separator, va_arg(args, double));
+				break;
+			case 's':
+				str = va_arg(args, char *);
+				if (!str)
+					str = "(nil)";
+				printf("%s%s", separator, str);
+				break;
+			default:
+				i++;
+				continue;
 		}
-		else if (c == 'i')
-		{
-			int int_arg = va_arg(args, int);
-
-			printf("%d", int_arg);
-		}
-		else if (c == 'f')
-		{
-			float float_arg = va_arg(args, double);
-
-			printf("%f", float_arg);
-		}
-		else if (c == 's')
-		{
-			char *str_arg = va_arg(args, char *);
-
-			if (str_arg == NULL)
-			{
-				printf("(nil)");
-			}
-			else
-			{
-				printf("%s", str_arg);
-			}
-		}
+		separator = ", ";
 		i++;
 	}
-	printf("\n");
 	va_end(args);
+	printf("\n");
 }
