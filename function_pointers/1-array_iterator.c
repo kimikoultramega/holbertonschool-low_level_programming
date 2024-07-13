@@ -9,7 +9,10 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-    for (size_t i = 0; i < size; i++) {
-        action(array[i]);  // Aplica la función action al elemento array[i]
-    }
+	size_t t;
+
+	for (t = 0; t < size; t++)
+	{
+        action(array[i]);
+	}
 }
