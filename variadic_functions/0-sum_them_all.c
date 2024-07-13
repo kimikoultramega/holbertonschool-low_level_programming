@@ -5,13 +5,11 @@
  * @n: n
  * Return: sum
  */
-
 int sum_them_all(const unsigned int n, ...)
 {
+	unsigned int i = 0;
 	int sum = 0;
-
 	va_list args;
-	unsigned int i;
 
 	va_start(args, n);
 
@@ -20,6 +18,6 @@ int sum_them_all(const unsigned int n, ...)
 		sum += va_arg(args, int);
 	}
 	va_end(args);
-
 	return (sum);
+
 }
