@@ -23,6 +23,8 @@ size_t print_list(const list_t *h)
 		{
 			printf("[unsigned int] char *, h->len, h->str");
 		}
+		nonocounter ++;
+		h = h->next;
 	}
 	return (nonocounter);
 }
