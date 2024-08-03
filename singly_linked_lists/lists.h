@@ -4,11 +4,10 @@
 #include <stddef.h>
 
 /**
- * struct lists_s - sigly linked list
+ * struct list_s - sigly linked list
  * @str: string
  * @len: length of the string str
  * @next: pointer to the next node
- *
  * Description: singly
  */
 
@@ -20,5 +19,6 @@ typedef struct list_s
 } list_t;
 
 size_t print_list(const list_t *h);
+size_t list_len(const list_t *h);
 
 #endif
