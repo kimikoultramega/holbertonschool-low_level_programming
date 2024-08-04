@@ -1,5 +1,5 @@
-#ifndef DLISTINT_S
-#define DLISTINT_S
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stddef.h>
